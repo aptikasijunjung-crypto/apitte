@@ -1,0 +1,42 @@
+name: Deploy Laravel to VPS
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  deploy:
+    name: CI/CD to VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            REPO="https://${{ secrets.GIT_TOKEN }}@github.com/aptikasijunjung-crypto/apitte.git"
+            DIR="${{ secrets.VPS_PATH }}"
+            BRANCH="deploy-sppt"
+            if [ ! -d "$DIR/.git" ]; then
+              echo "Clone repo..."
+              git clone --branch $BRANCH $REPO $DIR
+            else
+              echo "Pull update myasn ya..."
+              cd $DIR
+              git reset --hard HEAD
+              git pull origin $BRANCH
+            fi
+                
+            
+            
+            
+            
+            

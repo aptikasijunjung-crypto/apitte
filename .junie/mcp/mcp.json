@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "/usr/local/Cellar/php/8.5.0/bin/php",
+            "args": [
+                "/Users/fitriadi/Desktop/laravel/sppt-pajak/artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
