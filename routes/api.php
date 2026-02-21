@@ -15,5 +15,5 @@ Route::get('/coba', function () {
 });
 
 Route::controller(TteController::class)->group(function () {
-    Route::get("/v2/sign/pdf", 'index')->middleware(BasicMiddleware::class);
+    Route::post("/v2/sign/pdf", 'index')->middleware(BasicMiddleware::class);
 });
