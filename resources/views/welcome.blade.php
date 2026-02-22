@@ -155,7 +155,7 @@
                             <!--end::Menu wrapper-->
                             <!--begin::Toolbar-->
                             <div class="flex-equal text-end ms-1">
-                                <a href="authentication/layouts/corporate/sign-in.html" class="btn btn-success">Sign
+                                <a href="#" class="btn btn-success">Sign
                                     In</a>
                             </div>
                             <!--end::Toolbar-->
@@ -174,12 +174,12 @@
                             <br />with
                             <span
                                 style="background: linear-gradient(to right, #12CE5D 0%, #FFD80C 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
-                                <span id="kt_landing_hero_text">The Best Theme Ever</span>
+                                <span id="kt_landing_hero_text">The Best Public Sijunjung API</span>
                             </span>
                         </h1>
                         <!--end::Title-->
                         <!--begin::Action-->
-                        <a href="index.html" class="btn btn-primary">Try Metronic</a>
+                        <a href="#" class="btn btn-primary">Daftar</a>
                         <!--end::Action-->
                     </div>
                     <!--end::Heading-->
@@ -711,7 +711,7 @@
         </div>
         <!--end::Team Section-->
         <!--begin::Projects Section-->
-       
+
         <!--end::Projects Section-->
         <!--begin::Pricing Section-->
         <div class="mt-sm-n20">
@@ -1110,7 +1110,7 @@
                             <!--end::Logo image-->
                             <!--begin::Logo image-->
                             <span class="mx-5 fs-6 fw-semibold text-gray-600 pt-1"
-                                href="https://keenthemes.com">&copy; 2025 Keenthemes Inc.</span>
+                                href="https://keenthemes.com">&copy; 2025 Kominfosi Inc.</span>
                             <!--end::Logo image-->
                         </div>
                         <!--end::Copyright-->
