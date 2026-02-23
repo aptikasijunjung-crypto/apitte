@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\{DashboardController, LoginController, NikController};
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\{PengaturanController, TestController};
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,5 +32,9 @@ Route::middleware('auth:admin')->group(function () {
         Route::post('/nik/store', 'store')->name('nik.store');
         Route::post('/nik/modald', 'modald')->name('nik.modald');
         Route::post('/nik/delete', 'delete')->name('nik.delete');
+    });
+    Route::controller(PengaturanController::class)->group(function () {
+        Route::get('/pengaturan', 'index')->name('setting.index');
+        Route::post('/pengaturan', 'store')->name('setting.store');
     });
 });

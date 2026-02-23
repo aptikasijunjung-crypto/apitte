@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use App\Models\{Admin, User};
+use App\Models\{Admin, Pengaturan, User};
 use Database\Factories\AdminFactory;
 
 class DatabaseSeeder extends Seeder

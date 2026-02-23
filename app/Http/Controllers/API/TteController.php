@@ -46,12 +46,12 @@ class TteController extends Controller
                 'signatureProperties' => $request->signatureProperties,
                 'file' => $request->file,
             ];
-
+            $url = DB::table('pengaturan')->select('host_tte')->where('id', 1)->get()->first();
             $response = Http::withBody(json_encode($data))
                 ->withHeaders([
                     'Content-Type' => 'application/json',
                     'Authorization' => 'Basic ZXNpZ246cXdlcnR5'
-                ])->post("http://36.67.236.171:8194/api/v2/sign/pdf");
+                ])->post($url->host_tte . "/api/v2/sign/pdf");
             header("Content-type:application/json");
             $jd = json_decode($response);
             return response()->json($jd);

@@ -37,9 +37,9 @@
                 Charts
             </a>
             <!-- Sidenav Link (Tables)-->
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="{{ route('setting.index') }}">
                 <div class="nav-link-icon"><i data-feather="filter"></i></div>
-                Tables
+                Pengaturan
             </a>
         </div>
     </div>
@@ -47,7 +47,7 @@
     <div class="sidenav-footer">
         <div class="sidenav-footer-content">
             <div class="sidenav-footer-subtitle">Logged in as:</div>
-            <div class="sidenav-footer-title">Valerie Luna</div>
+            <div class="sidenav-footer-title">{{ Auth::guard('admin')->user()->name }}</div>
         </div>
     </div>
 </nav>
